@@ -1,0 +1,50 @@
+/*
+ Nombre del alumno: Alessio
+ Fecha de compilación: 09/11/2025
+ Descripción: Programa que calcula el factorial de los números del 1 al 13
+ usando una clase secundaria encargada del cálculo.
+*/
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Creación del objeto que usará el método factorial
+        CalculadoraFactorial calc = new CalculadoraFactorial();
+
+        // Bucle que recorre los números desde 1 hasta 13
+        for (int i = 1; i <= 13; i++) {
+
+            // Llamada al método factorial y almacenamiento del resultado
+            long resultado = calc.factorial(i);
+
+            // Impresión del resultado en pantalla
+            System.out.println("El factorial de " + i + " es: " + resultado);
+        }
+    }
+}
+
+
+
+Sec
+/*
+ Clase secundaria encargada de calcular el factorial de un número.
+*/
+
+public class CalculadoraFactorial {
+
+    /*
+     Método que recibe un número entero y devuelve su factorial.
+     Se usa un bucle for para multiplicar los valores desde 1 hasta el número recibido.
+    */
+    public long factorial(int numero) {
+
+        long resultado = 1;
+
+        // Cálculo del factorial acumulando multiplicaciones
+        for (int i = 1; i <= numero; i++) {
+            resultado *= i;
+        }
+
+        return resultado;
+    }
+}
